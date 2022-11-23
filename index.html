@@ -58,11 +58,13 @@ body {
 	  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
 	  }
 	  
-	  .left-side{
+	.left-side{
 		  width:24%;
 		  height:80%;
 		  position:relative;
-	  }
+		  display: flex;
+		  flex-direction:column;
+	}
 	  
 	  .left-side::before{
 		  content:" ";
@@ -153,6 +155,33 @@ body {
 	  .button input[type="button"]:hover{
 		  background:#48a3d8;
 	  }
+
+	  @media (max-width:800px) {
+		.content{
+			height: 100%;
+			flex-direction:column-reverse;
+		}
+		.left-side{
+			flex-direction:row;
+			margin-top: 50px;
+			width: 100%;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.details{  
+		margin-right:20px;
+	}
+		.details:last-child{
+		margin-right: 0;
+	}
+		.left-side::before{
+			display:none;
+		}
+		.right-side{
+			width: 100%;
+			margin-left: 0;
+	}
+	  }
 	
 	</style>
 </head>
@@ -178,7 +207,7 @@ body {
 		<li> CSS</li>
 		<li> JavaScript</li>
 		<br>
-		<h4>Форма для заполнения</h4>
+	<h4>Форма для заполнения</h4>
 	<div class="container"> 
 		<div class="content"> 
 			<div class="left-side">	
